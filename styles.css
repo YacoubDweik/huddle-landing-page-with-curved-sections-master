@@ -1,0 +1,352 @@
+:root {
+  /* Colors */
+  --Pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+  --White: hsl(0, 0%, 100%);
+  /* Sizes */
+  --sm: 0.5rem;
+  --md: 0.75rem;
+  --la: 1rem;
+  --xl: 1.25rem;
+  --2xl: 1.5rem;
+  --3xl: 2rem;
+  --4xl: 2.5rem;
+  --5xl: 4rem;
+  /* Headings - Font-Family: [Poppins] */
+  --font-weight-headings: 600;
+  /* Body, Call-to-actions - Font-Family: [Open Sans] */
+  --font-weight-body: 400;
+  --font-weight-links: 700;
+}
+
+/* Reset & Global Values */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Start */
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: var(--font-weight-body);
+}
+
+.container {
+  color: var(--Very-Dark-Cyan);
+}
+
+/* Intro Section */
+
+.container__main-wrapper {
+  padding: var(--2xl) var(--xl);
+  background-image: url("./images/bg-hero-mobile.svg");
+  background-color: var(--Very-Pale-Cyan);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container__sections,
+.footer__wrapper {
+  max-width: 1275px;
+  margin: 0 auto;
+  padding: var(--2xl) var(--xl);
+}
+
+.container__intro {
+  max-width: 1275px;
+  margin: 0 auto;
+}
+
+.intro__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--5xl);
+}
+
+.header__logo {
+  width: max(30%, 80px);
+}
+
+.header__link {
+  padding: var(--md) var(--3xl);
+  background-color: var(--White);
+  border-radius: var(--2xl);
+  box-shadow: 0 0 10px rgba(0%, 0%, 0%, 25%);
+  font-weight: var(--font-weight-links);
+}
+
+.intro__content {
+  padding: 0 var(--3xl);
+  text-align: center;
+}
+
+.content__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--2xl);
+}
+
+.body__title {
+  font-size: var(--3xl);
+  font-weight: var(--font-weight-headings);
+}
+
+.body__text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.body__link,
+.action__link {
+  margin: 0 auto;
+  padding: var(--la) var(--3xl);
+  font-weight: var(--font-weight-links);
+  background-color: var(--Pink);
+  color: var(--Very-Pale-Cyan);
+  border-radius: var(--2xl);
+  box-shadow: 0 0 10px rgba(0%, 0%, 0%, 25%);
+  transition: 0.3s;
+}
+
+.body__link:hover,
+.action__link:hover {
+  filter: opacity(0.75);
+}
+
+.content__image {
+  padding-top: var(--4xl);
+}
+
+/* Curve */
+
+.curve {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.curve::before {
+  content: "";
+  height: 150%;
+  width: 115%;
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  background-color: var(--Very-Pale-Cyan);
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.curve.bottom::before {
+  background-color: var(--Very-Dark-Cyan);
+  transform: rotateX(180deg);
+  bottom: -130px;
+}
+
+/* Other Sections */
+
+.container__sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--4xl);
+  padding: var(--4xl) var(--xl);
+}
+
+.container__section-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--2xl);
+  padding: var(--4xl);
+  text-align: center;
+  background-color: var(--White);
+  border-radius: var(--la);
+  box-shadow: 0 0 10px rgba(0%, 0%, 0%, 25%);
+}
+
+.container__section-box .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--la);
+}
+
+.body__title,
+.section__title,
+.action__title {
+  font-family: "Poppins";
+  font-weight: var(--font-weight-headings);
+}
+
+.section__text {
+  color: var(--Grayish-Blue);
+}
+
+.action {
+  max-width: 800px;
+  margin: 0 auto;
+  transform: translateY(calc(50% + var(--4xl)));
+}
+
+/* Footer */
+
+.container__footer {
+  padding: 150px 0 var(--xl);
+  background-color: var(--Very-Dark-Cyan);
+  color: var(--Very-Pale-Cyan);
+  text-align: center;
+}
+
+.footer__wrapper ul {
+  max-width: 350px;
+}
+
+.container__footer .logo {
+  max-width: 50%;
+}
+
+ul.footer__contact {
+  margin-bottom: var(--5xl);
+  gap: var(--3xl);
+}
+
+.contact__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--xl);
+}
+
+li.contact__item:not(.logo) img {
+  width: 15px;
+}
+
+.logo + .contact__item {
+  max-width: 300px;
+}
+
+.logo + .contact__item img {
+  align-self: flex-start;
+}
+
+.container__footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--xl);
+  margin: var(--xl) 0;
+  text-align: left;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+ul.footer__icons-list {
+  margin-top: var(--4xl);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--md);
+}
+
+.icons-list__item a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--sm);
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.icons-list__item a:hover {
+  color: var(--Pink);
+  border-color: var(--Pink);
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+  .container__main-wrapper {
+    background-image: url("./images/bg-hero-desktop.svg");
+  }
+  .intro__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xl);
+    text-align: left;
+  }
+  .body__link {
+    width: fit-content;
+    margin: 0;
+  }
+  .container__section-box:not(.action) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container__section-box {
+    text-align: left;
+  }
+  .container__section-box .wrapper {
+    align-items: flex-start;
+  }
+  .container__sections section:nth-child(1) .section__image {
+    order: 1;
+  }
+  .container__sections section:nth-child(3) .section__image {
+    order: 1;
+  }
+  .footer__wrapper,
+  .footer__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__nav {
+    width: 32%;
+  }
+}
